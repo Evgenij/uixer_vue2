@@ -1,7 +1,7 @@
 <template>
     <div class="page flex flex-col justify-between grow">
         <page-header></page-header>
-        <main class="page-data grow">
+        <main class="page-data">
             <router-view></router-view>
 <!--            <transition name="scale" mode="out-in">-->
 <!--                <router-view v-slot="{ Component }">-->
@@ -48,7 +48,9 @@
 
 <style lang="scss">
     .page-data {
-        margin: 0 100px;
+        height: 100vh;
+        padding: 100px;
+
     }
 
     .page {
@@ -60,5 +62,17 @@
     }
 
     // ----
+
+    .scale-enter-active,
+    .scale-leave-active {
+        transition: all 0.8s ease;
+    }
+
+
+    .scale-enter-from,
+    .scale-leave-to {
+        opacity: 0;
+        transform: scale(0.9);
+    }
 
 </style>

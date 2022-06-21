@@ -1,14 +1,14 @@
 <template>
-    <div>
+    <div class="tabs-wrapper h-full">
         <div class="tabs">
-            <ul class="flex px-12">
+            <ul class="flex px-12 space-x-6">
                 <li v-for="tab in tabs" :class="{ 'is-active': tab.isActive }"
-                    class="min-w-fit">
-                    <span @click="selectTab(tab)">{{ tab.name }}</span>
+                    class="min-w-fit pb-4 cursor-pointer" @click="selectTab(tab)">
+                    <span>{{ tab.name }}</span>
                 </li>
             </ul>
         </div>
-        <div class="tabs-details">
+        <div class="tabs-details h-full">
             <slot></slot>
         </div>
     </div>
@@ -18,18 +18,26 @@
     export default {
         name: "Tabs",
         data() {
-            return { tabs: [] };
+            return {
+                tabs: [],
+                tabActive: ''
+            };
         },
-
         created() {
-            this.tabs = this.$children;
+            this.tabs = this.$children
+            this.tabActive = 'UI/UX design'
         },
-
         methods: {
             selectTab(selectedTab) {
                 this.tabs.forEach(tab => {
                     tab.isActive = (tab.name == selectedTab.name);
+                    this.tabActive = selectedTab.name
                 });
+            }
+        },
+        watch: {
+            tabActive(val) {
+                this.$emit('changeTab', val)
             }
         }
     }
@@ -37,4 +45,7 @@
 
 <style lang="scss" scoped>
 
+    .data-area {
+        height: inherit;
+    }
 </style>

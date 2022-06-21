@@ -1,5 +1,5 @@
 <template>
-    <footer class="page-footer flex items-center justify-between">
+    <footer class="page-footer flex items-center justify-between absolute bottom-0 w-full">
         <div class="positions flex items-center space-x-6">
             <p class="font-light">UI/UX designer</p>
             <span></span>

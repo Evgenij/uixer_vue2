@@ -1,5 +1,5 @@
 <template>
-    <section class="content h-full">
+    <section class="content h-full flex flex-col">
         <side side="left" :links="links"></side>
         <side side="right">
             <toggle-theme></toggle-theme>
@@ -8,15 +8,17 @@
             <h3 class="page-title font-light text-2xl opacity-50 ">
                 Skills
             </h3>
-            <h4 class="font-semibold text-6xl">UI/UX design</h4>
+            <h4 class="font-semibold text-6xl relative top-2">{{activeTab}}</h4>
         </header>
-        <main>
-            <tabs>
+        <main class="data-page">
+            <tabs @changeTab="changeTab">
                 <tab name="UI/UX design" :selected="true">
-                    <design></design>
+                    <design :items="areas.design.items"
+                            :skills="areas.design.skills"></design>
                 </tab>
                 <tab name="Frontend">
-                    2
+                    <frontend :items="areas.frontend.items"
+                              :skills="areas.frontend.skills"></frontend>
                 </tab>
             </tabs>
         </main>
@@ -29,10 +31,11 @@
     import Tabs from "../elements/Tabs/Tabs";
     import Tab from "../elements/Tabs/Tab";
     import Design from "../elements/skills/Design";
+    import Frontend from "../elements/skills/Frontend";
 
     export default {
         name: "Skills",
-        components: {Design, Tab, Tabs, ToggleTheme, Side},
+        components: {Frontend, Design, Tab, Tabs, ToggleTheme, Side},
         data: ()=> ({
             links: [
                 {
@@ -47,8 +50,24 @@
                     name: 'contact',
                     href: 'contact'
                 },
-            ]
+            ],
+            areas: {
+                design: {
+                    items: ['Adobe Photoshop', 'Figma'],
+                    skills: ['prototyping', 'UI-kits']
+                },
+                frontend: {
+                    items: ['JavaScript', 'Vue JS'],
+                    skills: ['SCSS', 'UI-kits']
+                },
+            },
+            activeTab: 'UI/UX design'
         }),
+        methods: {
+            changeTab(val){
+                this.activeTab = val
+            }
+        },
         mounted() {
             this.setActiveThemeToggle()
         }
@@ -56,5 +75,7 @@
 </script>
 
 <style scoped>
-
+    .data-page {
+        height: inherit;
+    }
 </style>

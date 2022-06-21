@@ -395,6 +395,28 @@ template {
   background-color: #ffcd1c;
 }
 
+.dark-theme .tabs {
+  border-bottom: 1px solid #282930;
+}
+.dark-theme li {
+  position: relative;
+}
+.dark-theme li:before {
+  transition: 0.3s;
+  content: "";
+  display: block;
+  width: 40px;
+  height: 4px;
+  background: transparent;
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  margin-left: -20px;
+}
+.dark-theme li.is-active:before {
+  background: #ffcd1c;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
