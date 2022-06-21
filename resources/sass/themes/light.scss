@@ -1,0 +1,164 @@
+@import "vars/light";
+
+.light-theme {
+    background-color: $background;
+    color: $text-color;
+
+    .font {
+        &-thin {
+            font-weight: 300;
+        }
+        &-extralight {
+            font-weight: 400;
+        }
+        &-light {
+            font-weight: 500;
+        }
+        &-regular {
+            font-weight: 600;
+        }
+        &-semibold {
+            font-weight: 700;
+        }
+        &-bold {
+            font-weight: 800;
+        }
+        &-heavy {
+            font-weight: 900;
+        }
+    }
+
+    .primary {
+        &-font {
+            color: $primary;
+        }
+        &-border {
+            border: 1px solid $primary;
+        }
+        &-background {
+            background-color: $primary;
+        }
+    }
+
+    .link {
+        &.white {
+            &:hover {
+                color: $primary;
+            }
+        }
+    }
+
+    .link {
+        &:hover {
+            color: $primary;
+        }
+
+        &.blue {
+            &:hover {
+                color: $link;
+                i {
+                    transform: translateX(3px);
+                    color: $link;
+                }
+            }
+        }
+    }
+
+    .text-color-gray {
+        color: $gray;
+    }
+
+    .toggle-theme label span {
+        font-weight: 500;
+    }
+
+    // set dark theme
+    .toggle-theme label input:checked + span.label {
+        font-weight: 800;
+    }
+
+    .page-header {
+        border-bottom: 1px solid $lines;
+        z-index: 5000;
+        //background: $background;
+    }
+
+    .page-footer {
+        border-top: 1px solid $lines;
+        z-index: 2000;
+        padding: 0 140px;
+        height: 100px;
+        background: $background;
+    }
+
+    .side {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        height: 100vh;
+        z-index: 2500;
+
+        &.left {
+            left: 0;
+            border-right: 1px solid $lines;
+        }
+
+        &.right {
+            right: 0;
+            border-left: 1px solid $lines;
+        }
+    }
+
+    .toggle-menu {
+        background-color: $back-menu;
+    }
+
+    .pages-links {
+        z-index: 1000;
+        border-bottom: 1px solid $lines;
+
+        & .link {
+
+            & .dot {
+                background: $text-color;
+            }
+
+            &:after{
+                background: $lines;
+            }
+        }
+    }
+
+    .personal-data {
+        border-right: 1px solid $lines;
+    }
+
+    .personal-data__langs {
+        .divide {
+            background-color: $lines;
+        }
+    }
+
+    .button {
+        &.primary {
+            &:hover {
+                background-color: transparentize($primary, 0.95);
+            }
+        }
+    }
+
+    .download-buttons {
+        border: 1px solid $lines;
+
+        .lang__button {
+            border-left: 1px solid rgba(0, 0, 0, 0.1);
+
+            &:hover {
+                background-color: $primary;
+                color: white;
+            }
+        }
+    }
+}
