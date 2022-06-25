@@ -1,5 +1,5 @@
 <template>
-    <div class="tabs-wrapper h-full">
+    <div class="tabs-wrapper h-full flex flex-col">
         <div class="tabs">
             <ul class="flex px-12 space-x-6">
                 <li v-for="tab in tabs" :class="{ 'is-active': tab.isActive }"

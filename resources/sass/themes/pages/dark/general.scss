@@ -69,8 +69,20 @@
         }
     }
 
+    .main-link {
+        & .dot {
+            &:before {
+                border: 1px solid $primary;
+            }
+        }
+    }
+
     .text-color-gray {
         color: $gray;
+    }
+
+    footer.page-footer span.divider {
+        background: $primary;
     }
 
     .toggle-theme label span {
@@ -85,7 +97,10 @@
     .page-header {
         border-bottom: 1px solid $lines;
         z-index: 5000;
-        //background: $background;
+
+        .logo {
+            background: $primary;
+        }
     }
 
     .page-footer {
@@ -118,5 +133,13 @@
 
     .toggle-menu {
         background-color: $back-menu;
+
+        span {
+            color: $background;
+        }
+    }
+
+    span.divider{
+        background: $primary;
     }
 }

@@ -1,6 +1,6 @@
-@import "../../vars/dark";
+@import "../../vars/light";
 
-.dark-theme {
+.light-theme {
     .tabs {
         border-bottom: 1px solid $lines;
     }
@@ -28,7 +28,14 @@
         }
     }
 
+    & .page-skills  {
+        .area {
+            font-weight: 500;
+        }
+    }
+
     .numder {
+        font-weight: 200 !important;
         &-active {
             color: $primary;
         }
@@ -80,6 +87,7 @@
 
     .slider {
         &__item {
+            font-weight: 600;
             bottom: -18px;
         }
         &__footer {

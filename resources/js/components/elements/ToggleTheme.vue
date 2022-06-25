@@ -25,7 +25,6 @@
         width: 18px;
         height: 1px;
         margin: 28px 0;
-        background: $primary;
     }
 
     /*.toggle-theme span {*/

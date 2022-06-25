@@ -42,6 +42,8 @@
                     $('#light').prop('checked', true)
                 }
             }
+
+
         }
     }
 </script>

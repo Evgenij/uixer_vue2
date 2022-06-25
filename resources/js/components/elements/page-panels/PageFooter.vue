@@ -2,7 +2,7 @@
     <footer class="page-footer flex items-center justify-between absolute bottom-0 w-full">
         <div class="positions flex items-center space-x-6">
             <p class="font-light">UI/UX designer</p>
-            <span></span>
+            <span class="divider"></span>
             <p class="font-light">Frontend developer</p>
         </div>
         <div class="social-links flex items-center space-x-10">
@@ -22,8 +22,7 @@
 <style lang="scss" scoped>
     @import "resources/sass/variables";
 
-    span {
-        background: $primary;
+    span.divider {
         height: 18px;
         width: 1px;
     }

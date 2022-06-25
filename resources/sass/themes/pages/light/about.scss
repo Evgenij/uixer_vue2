@@ -1,0 +1,51 @@
+@import "../../vars/light";
+
+.light-theme {
+    .pages-links {
+        z-index: 1000;
+        border-bottom: 1px solid $lines;
+
+        & .main-link {
+
+            & .dot {
+                background: $text-color;
+            }
+
+            &:after{
+                background: $lines;
+            }
+        }
+    }
+
+    .personal-data {
+        border-right: 1px solid $lines;
+    }
+
+    .personal-data__langs {
+        .divide {
+            background-color: $lines;
+        }
+    }
+
+    .button {
+        &.primary {
+            &:hover {
+                background-color: transparentize($primary, 0.95);
+
+            }
+        }
+    }
+
+    .download-buttons {
+        border: 1px solid $lines;
+        .lang__button {
+            border-left: 1px solid rgba(0, 0, 0, 0.1);
+
+            &:hover {
+                background-color: $primary;
+                color: white;
+            }
+        }
+    }
+}
+

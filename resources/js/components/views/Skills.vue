@@ -1,5 +1,5 @@
 <template>
-    <section class="content h-full flex flex-col">
+    <section class="content page-skills h-full flex flex-col">
         <side side="left" :links="links"></side>
         <side side="right">
             <toggle-theme></toggle-theme>
@@ -8,7 +8,7 @@
             <h3 class="page-title font-light text-2xl opacity-50 ">
                 Skills
             </h3>
-            <h4 class="font-semibold text-6xl relative top-2">{{activeTab}}</h4>
+            <h4 class="font-semibold text-6xl relative top-2 area">{{activeTab}}</h4>
         </header>
         <main class="data-page">
             <tabs @changeTab="changeTab">
@@ -53,12 +53,48 @@
             ],
             areas: {
                 design: {
-                    items: ['Adobe Photoshop', 'Figma'],
-                    skills: ['prototyping', 'UI-kits']
+                    items: [
+                        {
+                            id: 1,
+                            name: 'Figma',
+                        },
+                        {
+                            id: 2,
+                            name: 'InVision Studio',
+                        },
+                        {
+                            id: 3,
+                            name: 'Adobe Photoshop',
+                        },
+                    ],
+                    skills: [
+                        'Prototyping', 'UI-kits',
+                        'User Flow', 'Design systems',
+                        'Responsive design', 'Components',
+                        'Wireframing', 'CJM',
+                        'Mobile design', 'Responsive design']
                 },
                 frontend: {
-                    items: ['JavaScript', 'Vue JS'],
-                    skills: ['SCSS', 'UI-kits']
+                    items: [
+                        {
+                            id: 1,
+                            name: 'JavaScript',
+                        },
+                        {
+                            id: 2,
+                            name: 'Vue JS',
+                        },
+                        {
+                            id: 3,
+                            name: 'Angular',
+                        },
+                    ],
+                    skills: [
+                        'Prototyping', 'UI-kits',
+                        'User Flow', 'Design systems',
+                        'Responsive design', 'Components',
+                        'Wireframing', 'CJM',
+                        'Mobile design', 'Responsive design']
                 },
             },
             activeTab: 'UI/UX design'

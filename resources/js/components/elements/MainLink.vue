@@ -40,7 +40,6 @@
                 width: 20px;
                 height: 20px;
                 position: absolute;
-                border: 1px solid $primary;
                 left: -7px;
                 top: -7px;
                 border-radius: 50%;
