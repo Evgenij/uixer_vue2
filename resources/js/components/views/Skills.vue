@@ -110,8 +110,14 @@
     }
 </script>
 
-<style scoped>
+<style lang="scss">
     .data-page {
         height: inherit;
+    }
+
+    .skills-wrapper {
+        width: 120%;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
     }
 </style>

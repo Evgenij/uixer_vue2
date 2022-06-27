@@ -554,7 +554,6 @@ template {
   stroke: #007de8;
 }
 .light-theme .slider__item {
-  font-weight: 600;
   bottom: -18px;
 }
 .light-theme .slider__footer {

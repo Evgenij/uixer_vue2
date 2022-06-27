@@ -1,5 +1,5 @@
 <template>
-    <section class="content h-full">
+    <section class="content page-main h-full">
         <side side="left"></side>
         <side side="right">
             <toggle-theme></toggle-theme>

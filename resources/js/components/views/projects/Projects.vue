@@ -1,12 +1,14 @@
 <template>
-    <section class="content h-full">
+    <section class="content page-projects h-full">
         <side side="left" :links="links"></side>
         <side side="right">
             <toggle-theme></toggle-theme>
         </side>
 
-        <router-link :to="{name: 'project', params: {id: 1}}">view project</router-link>
-        <router-view></router-view>
+<!--        <router-link :to="{name: 'project', params: {id: 1}}">view project</router-link>-->
+
+        <div class="background-panel primary-background absolute h-full"></div>
+
 
     </section>
 </template>
@@ -40,6 +42,10 @@
     }
 </script>
 
-<style scoped>
-
+<style lang="scss" scoped>
+    .background-panel {
+        width: 670px;
+        left: 50%;
+        margin-left: -335px;
+    }
 </style>

@@ -1,5 +1,5 @@
 <template>
-    <section class="content h-full">
+    <section class="content page-contact h-full">
         <side side="left" :links="links"></side>
         <side side="right">
             <toggle-theme></toggle-theme>

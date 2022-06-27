@@ -2,7 +2,7 @@
     <div class="frontend grid grid-cols-2 h-full">
         <div class="items flex flex-col justify-end h-full ">
             <div class="slider">
-                <div class="slider__item p-0 leading-none relative pl-12 text-8xl font-semibold">
+                <div class="slider__item p-0 leading-none relative pl-12 text-8xl font-bold">
                     {{activeItem.name}}
                 </div>
                 <div class="slider__footer font-light text-color-gray text-2xl flex justify-end p-6">
@@ -107,15 +107,11 @@
                 })
             };
 
-            $('#scroll-frontend').hScroll(10);
+            $('#scroll-frontend').hScroll(15);
 
         }
     }
 </script>
 
 <style scoped>
-    .skills-wrapper {
-        width: 1000px;
-        overflow-x:hidden;
-    }
 </style>
