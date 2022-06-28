@@ -5,7 +5,7 @@
             <toggle-theme></toggle-theme>
         </side>
         <header class="flex items-center w-full justify-between py-10 px-12 pb-4">
-            <h3 class="page-title font-light text-2xl opacity-50 ">
+            <h3 class="page-title font-light text-2xl page-name">
                 Skills
             </h3>
             <h4 class="font-semibold text-6xl relative top-2 area">{{activeTab}}</h4>

@@ -2,10 +2,10 @@
     <div class="frontend grid grid-cols-2 h-full">
         <div class="items flex flex-col justify-end h-full ">
             <div class="slider">
-                <div class="slider__item p-0 leading-none relative pl-12 text-8xl font-bold">
+                <div class="slider__item p-0 leading-none relative pl-12 z-50 text-8xl font-bold">
                     {{activeItem.name}}
                 </div>
-                <div class="slider__footer font-light text-color-gray text-2xl flex justify-end p-6">
+                <div class="slider__footer font-light text-color-gray opacity-60 text-2xl flex justify-end p-6">
                     Applications
                 </div>
             </div>
@@ -56,9 +56,6 @@
             },
         }),
         methods: {
-            showNumberItem(number) {
-                return number >= 10 ? number : '0'+number
-            },
             slide(direction) {
                 let currentId;
                 if (direction === 'next'){

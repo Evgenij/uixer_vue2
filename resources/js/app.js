@@ -63,7 +63,10 @@ Vue.mixin({
                 return date.split("-").reverse().join(".")
             }
             return 'не установлено'
-        }
+        },
+        showNumberItem(number) {
+            return number >= 10 ? number : '0'+number
+        },
     }
 })
 

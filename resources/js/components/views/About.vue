@@ -58,7 +58,7 @@
             </div>
         </div>
         <div class="main-data p-16 w-full">
-            <h3 class="page-title font-light text-2xl opacity-50 mb-12">
+            <h3 class="page-title font-light text-2xl page-name mb-12">
                 About me
             </h3>
             <header class="font-bold text-2xl mb-16">

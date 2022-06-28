@@ -26,6 +26,7 @@
     },
     "dependencies": {
         "autoprefixer": "10.4.5",
+        "vue-carousel-3d": "^1.0.1",
         "vue-router": "^3.5.3"
     }
 }
