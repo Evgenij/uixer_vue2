@@ -4,6 +4,22 @@
     background-color: $background;
     color: $text-color;
 
+    * {
+        scrollbar-width: thin;
+        scrollbar-color: $primary $lines;
+    }
+
+    *::-webkit-scrollbar-track,
+    html *::-webkit-scrollbar-track {
+        background: $lines;
+        margin: 20px;
+    }
+    *::-webkit-scrollbar-thumb,
+    html *::-webkit-scrollbar-thumb {
+        background-color: $primary;
+        border: 0px solid $lines;
+    }
+
     .font {
         &-thin {
             font-weight: 300;

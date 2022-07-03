@@ -9,6 +9,12 @@ html {
     overflow: hidden;
 }
 
+*::-webkit-scrollbar,
+html *::-webkit-scrollbar {
+    height: 4px;
+    width: 4px;
+}
+
 body {
     font-family: $font;
     font-weight: $font-weight;

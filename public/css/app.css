@@ -168,6 +168,20 @@ template {
   background-color: #F1F1F1;
   color: #191B23;
 }
+.light-theme * {
+  scrollbar-width: thin;
+  scrollbar-color: #007de8 #D8DBDE;
+}
+.light-theme *::-webkit-scrollbar-track,
+.light-theme html *::-webkit-scrollbar-track {
+  background: #D8DBDE;
+  margin: 20px;
+}
+.light-theme *::-webkit-scrollbar-thumb,
+.light-theme html *::-webkit-scrollbar-thumb {
+  background-color: #007de8;
+  border: 0px solid #D8DBDE;
+}
 .light-theme .font-thin {
   font-weight: 300;
 }
@@ -386,9 +400,71 @@ template {
   stroke: #F1F1F1;
 }
 
+.light-theme .project-page__back {
+  color: #5C5E63;
+}
+.light-theme .project-page__back svg path {
+  stroke: #5C5E63;
+}
+.light-theme .project-page__back:hover svg {
+  transform: translateX(-3px);
+}
+.light-theme .project-page__back:hover svg path {
+  stroke: #007de8;
+}
+.light-theme .project-page__data {
+  border-left: 1px solid #D8DBDE;
+}
+.light-theme .project-page .tool {
+  border-color: #D8DBDE;
+}
+.light-theme .project-page .project-data {
+  scroll-behavior: smooth;
+}
+.light-theme .project-page .project-data__preview, .light-theme .project-page .project-data__project-description {
+  position: relative;
+  height: 300px;
+}
+.light-theme .project-page .project-data__preview img, .light-theme .project-page .project-data__project-description img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.light-theme .project-page .project-data__project-description {
+  height: auto;
+}
+.light-theme .project-page .project-data .task {
+  position: relative;
+}
+.light-theme .project-page .project-data .task:before {
+  content: "";
+  height: 2px;
+  width: 14px;
+  background: #191B23;
+  position: absolute;
+  top: 13px;
+  left: 0;
+}
+
 .dark-theme {
   background-color: #12151A;
   color: #EBEBEB;
+}
+.dark-theme * {
+  scrollbar-width: thin;
+  scrollbar-color: #ffcd1c #282930;
+}
+.dark-theme *::-webkit-scrollbar-track,
+.dark-theme html *::-webkit-scrollbar-track {
+  background: #282930;
+  margin: 20px;
+}
+.dark-theme *::-webkit-scrollbar-thumb,
+.dark-theme html *::-webkit-scrollbar-thumb {
+  background-color: #ffcd1c;
+  border: 0px solid #282930;
 }
 .dark-theme .font-thin {
   font-weight: 200;
@@ -605,6 +681,12 @@ template {
 @tailwind utilities;
 html {
   overflow: hidden;
+}
+
+*::-webkit-scrollbar,
+html *::-webkit-scrollbar {
+  height: 4px;
+  width: 4px;
 }
 
 body {

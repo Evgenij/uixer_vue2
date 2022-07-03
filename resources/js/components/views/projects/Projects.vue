@@ -25,7 +25,7 @@
                     <header class="project__title flex justify-between">
                         <div class="project__number absolute font-light text-5xl">.{{showNumberItem(++index)}}</div>
                         <h4 class="project__name font-bold text-4xl">{{project.name}}</h4>
-                        <router-link :to="{name: 'project', params: {id: index}}"
+                        <router-link :to="{name: 'project', params: {id: project.name}}"
                                      class="project__link font-regular flex items-center text-xl space-x-1">
                             <span>Explore</span>
                             <svg width="21" height="14" viewBox="0 0 21 14" fill="none" xmlns="http://www.w3.org/2000/svg">
