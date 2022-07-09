@@ -5,8 +5,6 @@
             <toggle-theme></toggle-theme>
         </side>
 
-<!--        <router-link :to="{name: 'project', params: {id: 1}}">view project</router-link>-->
-
         <div class="background-panel primary-background absolute h-full"></div>
         <h3 class="page-title font-light text-2xl page-name absolute">
             Projects
@@ -34,7 +32,9 @@
                         </router-link>
                     </header>
                     <main class="project__photo h-full">
-                        <img :src="project.img" alt="" class="w-full">
+                        <router-link :to="{name: 'project', params: {id: project.name}}">
+                            <img :src="project.img" alt="" class="w-full">
+                        </router-link>
                     </main>
                     <footer class="project__articles flex justify-between">
                         <div class="project__category font-bold">{{project.category}}</div>
@@ -193,6 +193,30 @@
 
     .project__number {
         top: -120px;
+    }
+
+    .project {
+
+        &__photo {
+            position: relative;
+
+            img {
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &__link {
+
+
+            &:hover {
+                svg {
+                    transform: translateX(4px);
+                }
+            }
+        }
     }
 
 

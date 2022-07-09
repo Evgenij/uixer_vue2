@@ -1,0 +1,81 @@
+@import "../../vars/light";
+
+.light-theme {
+    .page-contact {
+        .social-link {
+            border: 1px solid $text-color;
+
+            svg path {
+                fill: $text-color;
+            }
+
+            &:hover {
+                background: $primary;
+                border: 1px solid $primary;
+
+                svg path {
+                    fill: white;
+                }
+            }
+        }
+    }
+
+    .types-message {
+        &:before {
+            background: $lines;
+        }
+    }
+
+    .type-message {
+        input[type='radio']:checked + label {
+            &:before {
+                background: $primary;
+            }
+        }
+    }
+
+    .cell-field {
+        &.required {
+            .cell-field__label {
+                &:before {
+                    color: $primary;
+                }
+            }
+        }
+
+        &__input {
+            border: 1px solid $lines;
+            background: $background;
+
+            &:hover {
+                border-color: $primary;
+            }
+
+            &:focus {
+                border-color: $primary;
+            }
+        }
+    }
+
+    button.button {
+        border: 1px solid $text-color;
+
+        svg path {
+            stroke: $text-color;
+        }
+
+        &:hover {
+            border-color: $primary;
+            background: $primary;
+            color: white;
+
+            svg path {
+                stroke: white;
+            }
+        }
+
+        &:focus {
+            outline: #007de8;
+        }
+    }
+}

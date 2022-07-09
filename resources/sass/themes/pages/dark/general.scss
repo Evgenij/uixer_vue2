@@ -93,8 +93,13 @@
         }
     }
 
-    .text-color-gray {
-        color: $gray;
+    .text-color {
+        &-gray{
+            color: $gray;
+        }
+        &-green{
+            color: $text-green;
+        }
     }
 
     footer.page-footer span.divider {

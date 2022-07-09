@@ -10,6 +10,12 @@ window.Vue = require('vue').default;
 import $ from 'jquery';
 window.$ = window.jQuery = $;
 
+import PrimeVue from 'primevue/config';
+
+import 'primevue/resources/themes/saga-blue/theme.css'      //theme
+import 'primevue/resources/primevue.min.css'                 //core css
+import 'primeicons/primeicons.css'                           //icons
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -40,6 +46,7 @@ Vue.mixin({
                 $('#app').toggleClass('dark-theme light-theme')
                 document.cookie = "theme=light";
             }
+            this.changeMainPhoto();
         },
         getCookie(name) {
             let matches = document.cookie.match(new RegExp("(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"));
@@ -51,6 +58,7 @@ Vue.mixin({
             } else {
                 $('#dark').prop('checked', true)
             }
+            this.changeMainPhoto();
         },
         formattingNumber(x, delimiter){
             return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, delimiter || " ");
@@ -67,8 +75,18 @@ Vue.mixin({
         showNumberItem(number) {
             return number >= 10 ? number : '0'+number
         },
+        changeMainPhoto() {
+            console.log('!!!')
+            if($('#app').attr('class') === 'light-theme') {
+                $('#main-photo').attr('src', 'img/main-light.png')
+            } else {
+                $('#main-photo').attr('src', 'img/main-dark.png')
+            }
+        }
     }
 })
+
+Vue.use(PrimeVue);
 
 import router from "./router";
 //import store from "./store/store";

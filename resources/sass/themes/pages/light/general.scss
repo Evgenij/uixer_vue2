@@ -93,8 +93,13 @@
         }
     }
 
-    .text-color-gray {
-        color: $gray;
+    .text-color {
+        &-gray{
+            color: $gray;
+        }
+        &-green{
+            color: $text-green;
+        }
     }
 
     span.divider{
@@ -153,6 +158,22 @@
 
         span {
             color: $background;
+        }
+    }
+
+    .pages-links {
+        z-index: 1000;
+        border-bottom: 1px solid $lines;
+
+        & .main-link {
+
+            & .dot {
+                background: $text-color;
+            }
+
+            &:after{
+                background: $lines;
+            }
         }
     }
 }

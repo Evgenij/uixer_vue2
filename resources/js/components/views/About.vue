@@ -1,5 +1,5 @@
 <template>
-    <section class="content page-adout flex h-full">
+    <section class="content page-about flex h-full">
         <side side="left" :links="links"></side>
         <side side="right">
             <toggle-theme></toggle-theme>
@@ -15,7 +15,7 @@
                         <h4 class="font-semibold text-lg">Eugene Ermolenko</h4>
                         <p class="text-color-gray font-regular">Ukraine</p>
                     </div>
-                    <p class="text-color-gray text-lg font-regular">{{getAgeFromBirthday(4,7,2000)}} years</p>
+                    <p class="text-color-gray text-lg font-regular">{{getAgeFromBirthday(7,4,2000)}} years</p>
                 </div>
                 <div class="personal-data__experience font-regular">
                     <p class="text-color-gray">Experience <span class="primary-font">{{getAgeFromBirthday(4,7,2018)}} years</span></p>
@@ -49,9 +49,9 @@
                     <div v-else class="download-buttons flex items-center bg-white pl-4 space-x-4 text-black">
                         <p>Language</p>
                         <div class="flex grow">
-                            <a href="" class="lang__button py-3 grow text-center" download @click="switchTypesFile">EN</a>
-                            <a href="" class="lang__button py-3 grow text-center" download @click="switchTypesFile">UA</a>
-                            <a href="" class="lang__button py-3 grow text-center" download @click="switchTypesFile">RU</a>
+                            <a href="img/index.png" class="lang__button py-3 grow text-center" download @click="switchTypesFile">EN</a>
+                            <a href="img/index.png" class="lang__button py-3 grow text-center" download @click="switchTypesFile">UA</a>
+                            <a href="img/index.png" class="lang__button py-3 grow text-center" download @click="switchTypesFile">RU</a>
                         </div>
                     </div>
                 </div>
@@ -171,6 +171,22 @@
         .divide {
             height: 18px;
             width: 1px;
+        }
+    }
+
+    .pages-links {
+        z-index: 1000;
+        border-bottom: 1px solid $lines;
+
+        & .main-link {
+
+            & .dot {
+                background: $text-color;
+            }
+
+            &:after{
+                background: $lines;
+            }
         }
     }
 

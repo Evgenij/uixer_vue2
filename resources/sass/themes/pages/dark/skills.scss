@@ -1,89 +1,65 @@
 @import "../../vars/dark";
 
 .dark-theme {
-    .tabs {
-        border-bottom: 1px solid $lines;
-    }
-
-    li {
-        position: relative;
-
-        &:before {
-            transition: .3s;
-            content: '';
-            display: block;
-            width: 40px;
-            height: 4px;
-            background: transparent;
-            position: absolute;
-            bottom: -2px;
-            left: 50%;
-            margin-left: -20px;
+    .page-skills {
+        .tabs {
+            border-bottom: 1px solid $lines;
         }
 
-        &.is-active {
-            &:before {
-                background: $primary;
-            }
-        }
-    }
-
-    .numder {
-        &-active {
-            color: $primary;
-        }
-    }
-
-    span.numders__line {
-        display: block;
-        height: 1px;
-        width: 70px;
-        background: $back-menu;
-    }
-
-    .skills {
-        border-left: 1px solid $lines;
-
-        &__list {
-            & .skill {
-                border: 1px solid $lines;
-                padding: 0.7em 1em;
-                margin: 0 20px 20px 0;
-                height: fit-content;
-                width: fit-content;
-
-                &:hover {
-                    border: 1px solid $primary;
-                    color: $lines;
+        li {
+            &.is-active {
+                &:before {
                     background: $primary;
                 }
             }
         }
-    }
 
-    .nav {
-        .arrows {
-            svg{
-                cursor: pointer;
-                path {
-                    stroke: $text-color;
-                }
+        .numder {
+            &-active {
+                color: $primary;
+            }
+        }
 
-                &:hover {
-                    path {
-                        stroke: $primary;
+        span.numders__line {
+            background: $back-menu;
+        }
+
+        .skills {
+            border-left: 1px solid $lines;
+
+            &__list {
+                & .skill {
+                    border: 1px solid $lines;
+
+                    &:hover {
+                        border: 1px solid $primary;
+                        color: $lines;
+                        background: $primary;
                     }
                 }
             }
         }
-    }
 
-    .slider {
-        &__item {
-            bottom: -18px;
+        .nav {
+            .arrows {
+                svg{
+                    path {
+                        stroke: $text-color;
+                    }
+
+                    &:hover {
+                        path {
+                            stroke: $primary;
+                        }
+                    }
+                }
+            }
         }
-        &__footer {
-            border-top: 1px solid $lines;
+
+        .slider {
+            &__footer {
+                border-top: 1px solid $lines;
+            }
         }
     }
 }

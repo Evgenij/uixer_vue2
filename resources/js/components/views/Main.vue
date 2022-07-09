@@ -10,7 +10,7 @@
             <main-link href="skills">Skills</main-link>
         </div>
         <div class="wrapper-photo w-full flex items-center justify-center h-full">
-            <img src="img/main-dark.png" alt="main-dark" class="main-photo">
+            <img id="main-photo" src="img/main-dark.png" alt="main-dark" class="main-photo">
             <h2 class="font-light nick">UIXER</h2>
         </div>
         <div class="pages-links bottom flex justify-between">
@@ -36,9 +36,9 @@
 
 <style lang="scss" scoped>
 
-    img{
+    img.main-photo{
         position: absolute;
-        top: -60px;
+        top: -150px;
         //z-index: 1500;
     }
 

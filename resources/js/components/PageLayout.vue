@@ -41,6 +41,7 @@
                     $('#app').toggleClass('dark-theme light-theme')
                     $('#light').prop('checked', true)
                 }
+                this.changeMainPhoto();
             }
 
 

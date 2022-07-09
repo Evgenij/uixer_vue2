@@ -12,8 +12,6 @@
 
             &:hover {
                 svg {
-                    transform: translateX(-3px);
-
                     path {
                         stroke: $primary;
                     }
@@ -30,36 +28,16 @@
         }
 
         .project-data {
-            scroll-behavior: smooth;
-
-            &__preview, &__project-description {
-                position: relative;
-                height: 300px;
-
-                img {
-                    position: absolute;
-                    height: 100%;
-                    width: 100%;
-                    object-fit: cover;
-                }
-            }
-
-            &__project-description {
-                height: auto;
-            }
-
             .task {
                 position: relative;
                 &:before {
-                    content: '';
-                    height: 2px;
-                    width: 14px;
                     background: $text-color;
-                    position: absolute;
-                    top: 13px;
-                    left: 0;
                 }
             }
+        }
+
+        .tags__line {
+            background: $gray;
         }
 
     }

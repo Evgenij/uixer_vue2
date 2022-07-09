@@ -120,4 +120,62 @@
         overflow-x: hidden;
         scroll-behavior: smooth;
     }
+
+    li {
+        position: relative;
+
+        &:before {
+            transition: .3s;
+            content: '';
+            display: block;
+            width: 40px;
+            height: 4px;
+            background: transparent;
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            margin-left: -20px;
+        }
+    }
+
+    .area {
+        font-weight: 500;
+    }
+
+    .numder {
+        font-weight: 200 !important;
+    }
+
+    span.numders__line {
+        display: block;
+        height: 1px;
+        width: 70px;
+    }
+
+    .skills {
+
+        &__list {
+            & .skill {
+                padding: 0.7em 1em;
+                margin: 0 20px 20px 0;
+                height: fit-content;
+                width: fit-content;
+            }
+        }
+    }
+
+    .nav {
+        .arrows {
+            svg{
+                cursor: pointer;
+            }
+        }
+    }
+
+    .slider {
+        &__item {
+            //font-weight: 600;
+            bottom: -18px;
+        }
+    }
 </style>

@@ -35,7 +35,7 @@
                 </div>
             </div>
 
-            <div class="skills__footer font-light text-color-gray text-2xl p-6">
+            <div class="skills__footer font-light text-color-gray  opacity-60  text-2xl p-6">
                 General skills
             </div>
         </div>

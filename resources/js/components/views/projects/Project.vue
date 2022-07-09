@@ -14,8 +14,12 @@
             </router-link>
 
             <div class="project-page__name mb-16">
-                <h3 class="font-heavy text-7xl mb-4">{{this.$route.params.id}}</h3>
-                <h4 class="primary-font text-xl">Redesign</h4>
+                <h3 class="font-heavy text-7xl mb-5">{{this.$route.params.id}}</h3>
+                <div class="tags flex items-center space-x-2">
+                    <h4 class="primary-font text-xl">Redesign</h4>
+                    <span class="tags__line opacity-60"></span>
+                    <h5 class="text-color-gray opacity-80 text-xl">Web-application</h5>
+                </div>
             </div>
             <div class="dev-tools w-full">
                 <p class="font-semibold text-xl">Development tools</p>
@@ -30,7 +34,7 @@
         <section class="basis-7/12 project-page__data project-data
                 p-10 pr-6 mr-4 h-full overflow-y-auto overflow-x-hidden">
             <div class="project-data__preview w-full mb-8">
-                <img src="https://images.pexels.com/photos/907487/pexels-photo-907487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                <img src="/img/index.png" alt="">
             </div>
             <div class="project-data__elements flex flex-col space-y-6 mb-4">
                 <div class="row flex space-x-14 w-full">
@@ -71,16 +75,24 @@
             </div>
             <div class="project-description">
                 <div class="project-description__img w-full py-4">
-                    <img src="https://images.pexels.com/photos/907487/pexels-photo-907487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                    <img src="img/index.png" alt="">
                 </div>
                 <div class="project-description__text text-color-gray py-4">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium assumenda atque,
                     consequatur, culpa eaque expedita harum id illum, iure molestias officiis quos sit vitae.
                     Accusamus dolorum necessitatibus odio ratione reprehenderit!
                 </div>
-                <div class="project-description__img w-full py-4">
-                    <img src="https://images.pexels.com/photos/907487/pexels-photo-907487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                <modal-image
+                    img="../img/index.png">
+                </modal-image>
+                <div class="project-description__text text-color-gray py-4">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium assumenda atque,
+                    consequatur, culpa eaque expedita harum id illum, iure molestias officiis quos sit vitae.
+                    Accusamus dolorum necessitatibus odio ratione reprehenderit!
                 </div>
+                <modal-image
+                    img="../img/index.png">
+                </modal-image>
             </div>
         </section>
     </section>
@@ -89,10 +101,12 @@
 <script>
     import ToggleTheme from "../../elements/ToggleTheme";
     import Side from "../../elements/page-panels/Side";
+    import ImagePreview from 'primevue/imagepreview';
+    import ModalImage from "../../elements/ModalImage";
 
     export default {
         name: "Project",
-        components: {ToggleTheme, Side},
+        components: {ModalImage, ToggleTheme, Side, ImagePreview},
         data: ()=> ({
             links: [
                 {
@@ -120,7 +134,7 @@
                 'AJAX',
                 'SCSS',
                 'Tailwind',
-            ]
+            ],
         }),
         mounted() {
             this.setActiveThemeToggle()
@@ -129,4 +143,51 @@
 </script>
 
 <style lang="scss" scoped>
+    .tags__line {
+        display: block;
+        height: 1px;
+        width: 18px;
+    }
+
+    .project-page {
+        &__back {
+            &:hover {
+                svg {
+                    transform: translateX(-3px);
+                }
+            }
+        }
+
+        .project-data {
+            scroll-behavior: smooth;
+
+            &__preview, &__project-description {
+                position: relative;
+                height: 300px;
+
+                img {
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            &__project-description {
+                height: auto;
+            }
+
+            .task {
+                position: relative;
+                &:before {
+                    content: '';
+                    height: 2px;
+                    width: 14px;
+                    position: absolute;
+                    top: 13px;
+                    left: 0;
+                }
+            }
+        }
+    }
 </style>
