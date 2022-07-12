@@ -3,8 +3,6 @@
 .light-theme {
     .page-contact {
         .social-link {
-            border: 1px solid $text-color;
-
             svg path {
                 fill: $text-color;
             }
@@ -20,15 +18,22 @@
         }
     }
 
-    .types-message {
-        &:before {
-            background: $lines;
-        }
-    }
 
     .type-message {
-        input[type='radio']:checked + label {
+
+        input[type='radio'] + label {
+            border: 1px solid $lines;
+
             &:before {
+                border: 1px solid rgba($gray, 0.3);
+            }
+        }
+
+        input[type='radio']:checked + label {
+
+            border-color: $primary;
+
+            &:after {
                 background: $primary;
             }
         }

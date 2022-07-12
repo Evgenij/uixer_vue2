@@ -36,10 +36,10 @@
                         console.info('Method "contains" is normal: ', e)
                     }
 
-                    $('#dark').prop('checked', true)
+                    $('.toggle-theme__dark').prop('checked', true)
                 } else {
                     $('#app').toggleClass('dark-theme light-theme')
-                    $('#light').prop('checked', true)
+                    $('.toggle-theme__light').prop('checked', true)
                 }
                 this.changeMainPhoto();
             }

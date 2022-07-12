@@ -38,7 +38,7 @@ import 'primeicons/primeicons.css'                           //icons
 Vue.mixin({
     methods:{
         changeTheme() {
-            console.log('change theme')
+            //console.log('change theme')
             if($('#app').attr('class') === 'light-theme') {
                 $('#app').toggleClass('light-theme dark-theme')
                 document.cookie = "theme=dark";
@@ -46,6 +46,7 @@ Vue.mixin({
                 $('#app').toggleClass('dark-theme light-theme')
                 document.cookie = "theme=light";
             }
+            this.setActiveThemeToggle()
             this.changeMainPhoto();
         },
         getCookie(name) {
@@ -54,9 +55,9 @@ Vue.mixin({
         },
         setActiveThemeToggle() {
             if($('#app').attr('class') === 'light-theme') {
-                $('#light').prop('checked', true)
+                $('.toggle-theme__light').prop('checked', true)
             } else {
-                $('#dark').prop('checked', true)
+                $('.toggle-theme__dark').prop('checked', true)
             }
             this.changeMainPhoto();
         },
@@ -76,7 +77,7 @@ Vue.mixin({
             return number >= 10 ? number : '0'+number
         },
         changeMainPhoto() {
-            console.log('!!!')
+            //console.log('change photo')
             if($('#app').attr('class') === 'light-theme') {
                 $('#main-photo').attr('src', 'img/main-light.png')
             } else {

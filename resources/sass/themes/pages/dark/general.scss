@@ -124,6 +124,22 @@
         }
     }
 
+    input#menu:checked + .block-menu {
+        background: rgb(25 30 42 / 60%);
+    }
+
+    .block-menu{
+        //color: $background;
+        &__item {
+            border-top: 1px solid $lines;
+            &:hover {
+                border-color: $primary;
+                color: $primary;
+                background: rgba($primary, .05)
+            }
+        }
+    }
+
     .page-footer {
         border-top: 1px solid $lines;
         z-index: 2000;
@@ -162,5 +178,15 @@
 
     span.divider{
         background: $primary;
+    }
+
+    .toggle-theme{
+        label span {
+            color: $text-color;
+        }
+    }
+
+    .social-link {
+        border: 1px solid $text-color;
     }
 }

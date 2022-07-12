@@ -8,7 +8,7 @@
         <h3 class="page-title font-light text-2xl page-name absolute">
             Contact
         </h3>
-        <div class="page-contact__links links basis-1/2 flex flex-col justify-end px-14 py-16">
+        <div class="page-contact__links links basis-1/2 flex flex-col justify-center px-14 py-16">
             <h4 class="font-heavy links__title mb-16">
                 Is there anything to discuss?
             </h4>
@@ -41,18 +41,18 @@
                 </div>
             </div>
         </div>
-        <div class="page-contact__form flex items-end basis-1/2">
-            <div class="types-message flex space-x-6">
+        <div class="page-contact__form flex flex-col justify-center basis-1/2">
+            <div class="types-message mb-16 flex space-x-4">
                 <div class="type-message">
                     <input type="radio" name="type-mess" id="offer" checked>
-                    <label for="offer" class="block cursor-pointer">Send offer</label>
+                    <label for="offer" class="block cursor-pointer px-8 py-5 pl-16">Send offer</label>
                 </div>
                 <div class="type-message cursor-pointer">
                     <input type="radio" name="type-mess" id="hello">
-                    <label for="hello" class="block cursor-pointer">Just say "Hello"</label>
+                    <label for="hello" class="block cursor-pointer px-8 py-5 pl-16">Just say "Hello"</label>
                 </div>
             </div>
-            <form action="" @submit.prevent="" class="form-message pr-16 mb-16 w-full flex flex-col space-y-8">
+            <form action="" @submit.prevent="" class="form-message pr-16 w-full flex flex-col space-y-8">
                 <div class="row flex space-x-6">
                     <div class="cell-field required w-full">
                         <label class="cell-field__label block font-light text-2xl mb-2 max-w-fit relative" for="name">
@@ -169,53 +169,37 @@
         height: 50px;
     }
 
-    .types-message {
-        position: absolute;
-        top: 22%;
-        left: 100px;
-        width: 100vw;
-        padding-left: 45%;
-
-        &:before {
-            content: "";
-            position: absolute;
-            z-index: 0;
-            height: 1px;
-            width: 100vw;
-            left: 0;
-            bottom: 1px;
-            display: block;
-        }
-    }
-
     .type-message {
         position: relative;
         width: fit-content;
 
         input[type='radio'] {
             display: none;
-
-            + label {
-                padding-bottom: 10px;
-
-                &:before {
-                    transition: .3s;
-                    background: transparent;
-                }
-            }
         }
 
         input[type='radio'] + label {
-            &:before {
+
+            &:before, &:after {
                 content: '';
                 position: absolute;
-                z-index: 10;
-                left: 50%;
-                bottom: 0;
-                margin-left: -20px;
                 display: block;
-                width: 40px;
-                height: 4px;
+                border-radius: 50%;
+                transition: .3s;
+            }
+
+            &:before {
+                left: 24px;
+                top: 22px;
+                width: 22px;
+                height: 22px;
+            }
+
+            &:after {
+                left: 29px;
+                top: 27px;
+                width: 12px;
+                height: 12px;
+                background: transparent;
             }
         }
     }

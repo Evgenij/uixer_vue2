@@ -49,7 +49,7 @@
                     <div v-else class="download-buttons flex items-center bg-white pl-4 space-x-4 text-black">
                         <p>Language</p>
                         <div class="flex grow">
-                            <a href="img/index.png" class="lang__button py-3 grow text-center" download @click="switchTypesFile">EN</a>
+                            <a href="./public/files/resume.pdf" class="lang__button py-3 grow text-center" download @click="switchTypesFile">EN</a>
                             <a href="img/index.png" class="lang__button py-3 grow text-center" download @click="switchTypesFile">UA</a>
                             <a href="img/index.png" class="lang__button py-3 grow text-center" download @click="switchTypesFile">RU</a>
                         </div>
@@ -57,7 +57,7 @@
                 </div>
             </div>
         </div>
-        <div class="main-data p-16 w-full">
+        <div class="main-data p-16 pb-6 w-full overflow-y-auto">
             <h3 class="page-title font-light text-2xl page-name mb-12">
                 About me
             </h3>
@@ -95,6 +95,17 @@
                         Instagram
                         <i class='bx bx-right-arrow-alt text-xl ml-1'></i>
                     </a>
+                </div>
+            </section>
+            <section class="certificates mt-6">
+                <h5 class="primary-font font-bold mb-4">Certificates</h5>
+                <div class="certificates-list grid grid-cols-3 gap-5 flex-wrap">
+                    <div class="certificate border p-10">
+                        <a href="./public/files/certificates/Figma_Online_store_design.pdf" alt="" target="_blank">open</a>
+                    </div>
+                    <div class="certificate border p-10">2</div>
+                    <div class="certificate border p-10">3</div>
+                    <div class="certificate border p-10">4</div>
                 </div>
             </section>
         </div>

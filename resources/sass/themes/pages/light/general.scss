@@ -17,7 +17,7 @@
     *::-webkit-scrollbar-thumb,
     html *::-webkit-scrollbar-thumb {
         background-color: $primary;
-        border: 0px solid $lines;
+        border: 0 solid $lines;
     }
 
     .font {
@@ -125,6 +125,23 @@
         }
     }
 
+    input#menu:checked + .block-menu {
+        background: rgb(190 190 192 / 60%);
+    }
+
+    .block-menu{
+        //color: $background;
+        &__item {
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            &:hover {
+                border-color: $primary;
+                color: $primary;
+                background: rgba($primary, .10)
+            }
+        }
+    }
+
+
     .page-footer {
         border-top: 1px solid $lines;
         z-index: 2000;
@@ -174,6 +191,20 @@
             &:after{
                 background: $lines;
             }
+        }
+    }
+
+    .toggle-theme{
+        label span {
+            color: $text-color;
+        }
+    }
+
+    .social-link {
+        border: 1px solid $text-color;
+
+        svg path {
+            fill: $text-color;
         }
     }
 }
