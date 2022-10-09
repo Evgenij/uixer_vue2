@@ -81,31 +81,31 @@
             projects: [
                 {
                     name: 'Some name project',
-                    img: 'https://images.pexels.com/photos/1181359/pexels-photo-1181359.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+                    img: 'https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80',
                     category: 'Redesign',
                     type: 'Web-application'
                 },
                 {
                     name: 'Some different name project',
-                    img: 'https://images.pexels.com/photos/785418/pexels-photo-785418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+                    img: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
                     category: 'Concept',
                     type: 'Mobile App'
                 },
                 {
                     name: 'Some name project',
-                    img: 'https://images.pexels.com/photos/102061/pexels-photo-102061.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+                    img: 'https://images.unsplash.com/photo-1617471346061-5d329ab9c574?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
                     category: 'Redesign',
                     type: 'Web-application'
                 },
                 {
                     name: 'Some different name project',
-                    img: 'https://images.pexels.com/photos/907487/pexels-photo-907487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+                    img: 'https://images.unsplash.com/photo-1608306448197-e83633f1261c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
                     category: 'Concept',
                     type: 'Mobile App'
                 },
                 {
                     name: 'Some name project',
-                    img: 'https://images.pexels.com/photos/1181359/pexels-photo-1181359.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+                    img: 'https://images.unsplash.com/photo-1632159312743-3b08a5abd721?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
                     category: 'Redesign',
                     type: 'Web-application'
                 },
@@ -145,6 +145,7 @@
 
         .carousel-3d-controls {
             top: 35% !important;
+            z-index: -1000;
 
             & .prev, .next {
                 backdrop-filter: grayscale(1) contrast(1);

@@ -1453,27 +1453,27 @@ __webpack_require__.r(__webpack_exports__);
       }],
       projects: [{
         name: 'Some name project',
-        img: 'https://images.pexels.com/photos/1181359/pexels-photo-1181359.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        img: 'https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80',
         category: 'Redesign',
         type: 'Web-application'
       }, {
         name: 'Some different name project',
-        img: 'https://images.pexels.com/photos/785418/pexels-photo-785418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        img: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
         category: 'Concept',
         type: 'Mobile App'
       }, {
         name: 'Some name project',
-        img: 'https://images.pexels.com/photos/102061/pexels-photo-102061.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        img: 'https://images.unsplash.com/photo-1617471346061-5d329ab9c574?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
         category: 'Redesign',
         type: 'Web-application'
       }, {
         name: 'Some different name project',
-        img: 'https://images.pexels.com/photos/907487/pexels-photo-907487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        img: 'https://images.unsplash.com/photo-1608306448197-e83633f1261c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
         category: 'Concept',
         type: 'Mobile App'
       }, {
         name: 'Some name project',
-        img: 'https://images.pexels.com/photos/1181359/pexels-photo-1181359.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        img: 'https://images.unsplash.com/photo-1632159312743-3b08a5abd721?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
         category: 'Redesign',
         type: 'Web-application'
       }]
@@ -2027,7 +2027,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".page-name {\n  top: 150px;\n  left: 160px;\n}\n.background-panel {\n  width: 670px;\n  left: 50%;\n  margin-left: -335px;\n}\n.slider-projects {\n  height: 100% !important;\n  padding: 150px 0 30px 0;\n  margin: 0 !important;\n}\n.slider-projects .carousel-3d-slide {\n  overflow: visible;\n  background-color: transparent;\n  display: flex;\n}\n.slider-projects .carousel-3d-controls {\n  top: 35% !important;\n}\n.slider-projects .carousel-3d-controls .prev, .slider-projects .carousel-3d-controls .next {\n  -webkit-backdrop-filter: grayscale(1) contrast(1);\n          backdrop-filter: grayscale(1) contrast(1);\n}\n.slider-projects .carousel-3d-controls .prev:hover, .slider-projects .carousel-3d-controls .next:hover {\n  opacity: 0 !important;\n}\n.slider-projects .carousel-3d-controls .prev {\n  left: 0;\n}\n.slider-projects .carousel-3d-controls .next {\n  right: 0;\n}\n.slider-projects div.carousel-3d-slider {\n  height: 100% !important;\n}\n.slider-projects .slide {\n  height: 100% !important;\n}\n.panel-grayscale {\n  position: absolute;\n  z-index: 5000;\n  top: 220px;\n  -webkit-backdrop-filter: grayscale(1) contrast(1);\n          backdrop-filter: grayscale(1) contrast(1);\n  width: 500px;\n  height: 580px;\n}\n.panel-grayscale.left {\n  left: 100px;\n}\n.panel-grayscale.right {\n  right: 100px;\n}\n.project__number {\n  top: -120px;\n}\n.project__photo {\n  position: relative;\n}\n.project__photo img {\n  position: absolute;\n  height: 100%;\n  width: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.project__link:hover svg {\n  transform: translateX(4px);\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".page-name {\n  top: 150px;\n  left: 160px;\n}\n.background-panel {\n  width: 670px;\n  left: 50%;\n  margin-left: -335px;\n}\n.slider-projects {\n  height: 100% !important;\n  padding: 150px 0 30px 0;\n  margin: 0 !important;\n}\n.slider-projects .carousel-3d-slide {\n  overflow: visible;\n  background-color: transparent;\n  display: flex;\n}\n.slider-projects .carousel-3d-controls {\n  top: 35% !important;\n  z-index: -1000;\n}\n.slider-projects .carousel-3d-controls .prev, .slider-projects .carousel-3d-controls .next {\n  -webkit-backdrop-filter: grayscale(1) contrast(1);\n          backdrop-filter: grayscale(1) contrast(1);\n}\n.slider-projects .carousel-3d-controls .prev:hover, .slider-projects .carousel-3d-controls .next:hover {\n  opacity: 0 !important;\n}\n.slider-projects .carousel-3d-controls .prev {\n  left: 0;\n}\n.slider-projects .carousel-3d-controls .next {\n  right: 0;\n}\n.slider-projects div.carousel-3d-slider {\n  height: 100% !important;\n}\n.slider-projects .slide {\n  height: 100% !important;\n}\n.panel-grayscale {\n  position: absolute;\n  z-index: 5000;\n  top: 220px;\n  -webkit-backdrop-filter: grayscale(1) contrast(1);\n          backdrop-filter: grayscale(1) contrast(1);\n  width: 500px;\n  height: 580px;\n}\n.panel-grayscale.left {\n  left: 100px;\n}\n.panel-grayscale.right {\n  right: 100px;\n}\n.project__number {\n  top: -120px;\n}\n.project__photo {\n  position: relative;\n}\n.project__photo img {\n  position: absolute;\n  height: 100%;\n  width: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.project__link:hover svg {\n  transform: translateX(4px);\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
